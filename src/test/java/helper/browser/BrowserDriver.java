@@ -1,2 +1,9 @@
-package helper.browser;public class BrowserDriver {
+package helper.browser;
+
+import org.openqa.selenium.WebDriver;
+
+public class BrowserDriver {
+
+    public static WebDriver driver;
+
 }
