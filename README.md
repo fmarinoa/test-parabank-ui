@@ -40,7 +40,7 @@ El proyecto está estructurado de la siguiente manera:
 
 1. Clonar el Repositorio
 
-   `git clone https://github.com/francoedson/test-parabank-ui`
+   `git clone https://github.com/francoedson/test-parabank-ui.git`
 
    `cd test-parabank-ui`
 
