@@ -40,9 +40,9 @@ El proyecto está estructurado de la siguiente manera:
 
 1. Clonar el Repositorio
 
-   `git clone https://github.com/tu-usuario/tu-repo.git`
+   `git clone https://github.com/francoedson/test-parabank-ui`
 
-   `cd tu-repo`
+   `cd test-parabank-ui`
 
 
 2. Configurar Maven
