@@ -1,5 +1,6 @@
 package stepsdefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
@@ -16,6 +17,11 @@ public class HomeStepDefs {
     @Before(order = 1)
     public void setScenario(Scenario scenario) {
         this.scenario = scenario;
+    }
+
+    @After
+    public void quitDriver() {
+        driver.quit();
     }
 
     @Given("estoy en la pagina de parabank")
