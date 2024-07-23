@@ -14,20 +14,28 @@ public class LoginPage extends BrowserDriver {
     private static By txtPassword = By.xpath("//form[@name='login']/div/input[@name='password']");
     private static By btnLogin = By.xpath("//form[@name='login']/div/input[@value='Log In']");
 
-    public static void sendUsername() throws InterruptedException {
+    public static void sendRandomUsername() throws InterruptedException {
         sendKeysByLocator(txtUsername, SharedContext.getUsername());
     }
 
-    public static void sendPassword() throws InterruptedException {
+    public static void sendRandomPassword() throws InterruptedException {
         sendKeysByLocator(txtPassword, SharedContext.getPassword());
+    }
+
+    public static void sendUsername(String user) throws InterruptedException {
+        sendKeysByLocator(txtUsername, user);
+    }
+
+    public static void sendPassword(String pass) throws InterruptedException {
+        sendKeysByLocator(txtPassword, pass);
+    }
+
+    public static void validateRandomUserSession() throws InterruptedException {
+        verifySuccessMessage("Welcome", 5);
+        verifySuccessMessage(SharedContext.getFullname(), 5);
     }
 
     public static void clickLogin() throws InterruptedException {
         clickByLocator(btnLogin);
-    }
-
-    public static void validateSession() throws InterruptedException {
-        verifySuccessMessage("Welcome", 5);
-        verifySuccessMessage(SharedContext.getFullname(), 5);
     }
 }

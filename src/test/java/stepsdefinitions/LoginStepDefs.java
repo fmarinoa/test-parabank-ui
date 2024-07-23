@@ -34,16 +34,24 @@ public class LoginStepDefs {
 
     @E("inicio sesión con la cuenta que acabo de crear")
     public void inicioSesiónConLaCuentaQueAcaboDeCrear() throws InterruptedException {
-        sendUsername();
-        sendPassword();
+        sendRandomUsername();
+        sendRandomPassword();
         screenShot();
         clickLogin();
     }
 
     @Entonces("valido haber iniciado sesión exitosamente")
     public void vaidoHaberIniciadoSesiónExitosamente() throws InterruptedException {
-        validateSession();
+        validateRandomUserSession();
         screenShot();
+    }
+
+    @Cuando("inicio sesión con con el usuario {string} y contraseña {string}")
+    public void inicioSesiónConConElUsuarioYContraseña(String arg0, String arg1) throws InterruptedException {
+        sendUsername(arg0);
+        sendPassword(arg1);
+        screenShot();
+        clickLogin();
     }
 
     public void screenShot() {
